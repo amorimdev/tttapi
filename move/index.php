@@ -31,10 +31,6 @@ $app['move'] = function () use ($app) {
     return new Maker($app['service_move'], $app['service_winner_verifier'], $app['validator']);
 };
 
-$app->mount('/move', new MoveController());
-
-$app->get('/', function () {
-    return 'Hello World!';
-});
+$app->mount('/', new MoveController());
 
 $app->run();
