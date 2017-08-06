@@ -1,0 +1,19 @@
+{
+    "name": "vaynard/tttapi",
+    "type": "project",
+    "description": "Tic Tac Toe PHP Api",
+    "authors": [
+        {
+            "name": "Jhonatan Amorim",
+            "email": "amorim.dev@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"TicTacToe\\": "src/"}
+    },
+    "require": {
+        "php": ">=5.6.0",
+        "silex/silex": "~2.0"
+    }
+}
