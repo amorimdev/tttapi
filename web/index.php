@@ -33,8 +33,8 @@ $app['move'] = function () use ($app) {
 
 $app->mount('/move', new MoveController());
 
-$app->get('/', function () use ($app) {
-    return $app->redirect('/move');
+$app->get('/', function () {
+    return 'Hello World!';
 });
 
 $app->run();
