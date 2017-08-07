@@ -1,5 +1,6 @@
 <?php
 
+use Silex\Application;
 use TicTacToe\Component\Move\Maker;
 use TicTacToe\Component\Move\Validator;
 use TicTacToe\Controller\MoveController;
@@ -9,7 +10,7 @@ use TicTacToe\Service\Board\WinnerVerifier;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-$app = new Silex\Application();
+$app = new Application();
 
 $app['service_validator'] = function () {
     return new ValidatorService();
