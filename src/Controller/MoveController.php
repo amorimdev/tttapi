@@ -23,10 +23,6 @@ class MoveController implements ControllerProviderInterface
         $controllers->post('/', function (Request $request) use ($app) {
             return $app['move']->makeMoveByRequest($request);
         });
-        
-        $controllers->options('/', function () {
-                return new \Symfony\Component\HttpFoundation\JsonResponse(null, 204);
-        })->assert('anything', '.*');
 
         return $controllers;
     }

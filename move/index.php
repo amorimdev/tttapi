@@ -1,6 +1,7 @@
 <?php
 
 use Silex\Application;
+use JDesrosiers\Silex\Provider\CorsServiceProvider;
 use TicTacToe\Component\Move\Maker;
 use TicTacToe\Component\Move\Validator;
 use TicTacToe\Controller\MoveController;
@@ -33,5 +34,11 @@ $app['move'] = function () use ($app) {
 };
 
 $app->mount('/', new MoveController());
+
+$app->register(new CorsServiceProvider(), [
+    "cors.allowOrigin" => "https://tttapp-vaynard.c9users.io",
+]);
+
+$app["cors-enabled"]($app);
 
 $app->run();
